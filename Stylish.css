@@ -1,0 +1,151 @@
+/*HEADER*/
+
+#top{
+	background-image: linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	
+	white-space:nowrap;
+	position:relative;
+	top:-40px;
+	padding-top:40px;
+	z-index:-99
+}
+
+#top div{
+	color:#A1A9A1;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight:700;
+	font-size:6.25em;
+	letter-spacing:-6px;
+	position:relative;
+	left:160px;
+	z-index:0;
+}
+
+#top div:after{
+	content:attr(title);
+	color:#D0D4D0;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow: 0.1em 0.1em 0.2em black;
+	position:absolute;
+	left:-2px;
+	top:-1px;
+	z-index:-1;
+}
+
+#top div:before{
+	content:attr(title);
+	clip:rect(0px,800px,75px,0px);
+	opacity:0.8;
+	color:#EFF1EF;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:1;
+}
+
+/*CONTENT*/
+body{
+	background:#3D453D url("resources/leftbottom.jpg") no-repeat left bottom;
+	height:100%;
+}
+canvas{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+div.full{
+  display:block;
+  position:absolute;
+  overflow:hidden;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+div.post{
+	/*Pretty*/
+	background-image: linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	border-bottom-left-radius:2em;
+	-webkit-border-bottom-left-radius:2em;
+	/*Gritty*/
+	padding:10px;
+	padding-left:40px;
+	margin-top:5px;
+	margin-bottom:5px;
+	position:relative;
+	left:320px;
+	width:100%;
+}
+
+div.links{
+	background-image: linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
+	padding:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100%;
+}
+
+
+div.app{
+
+}
+
+.links span{
+	color:#A1A9A1;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight:600;
+	font-size:2em;
+	letter-spacing:-.05em;
+	
+	transition: all .1s, color 1s;
+	-moz-transition: all .2s, color 2s;
+	-o-transition: all .2s, color 2s;
+	-webkit-transition: all .2s, color 2s;
+	margin:5px;
+	padding:5px;
+	border-right:1px solid #3D453D;
+	border-left:1px solid #3D453D;
+}
+.links span:hover{
+	color:#EFF1EF;
+	cursor:pointer;
+	text-shadow:-1px -1px 0px #121512,-2px -2px 0px #121512, -3px -3px 0px #121512;
+	position:relative;
+	left:3px;
+	top:3px;
+	/*Shoutout to Sergio Camalich for the text animation idea*/
+}
+
+ol.tumblr_posts{
+
+border:5px dotted black;
+
+}
+
+.tumblr_posts li{
+
+}
+
+
+
+/*FOOTER*/
+
+#bottom{
+	position:absolute;
+	bottom:0px;
+}
