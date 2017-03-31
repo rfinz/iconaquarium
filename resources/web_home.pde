@@ -15,11 +15,11 @@ int curse = 0;
 void setup(){
   nimg[0] = loadImage("resources/resume.png");
   nimg[1] = loadImage("resources/stackoverflow.png");
-  nimg[2] = loadImage("resources/linkedin.png");
-  nimg[3] = loadImage("resources/tumblr.png");
+  nimg[2] = loadImage("resources/github.png");
+  nimg[3] = loadImage("resources/soundcloud.png");
   nimg[4] = loadImage("resources/twitter.png");
   nimg[5] = loadImage("resources/facebook.png");
-  
+
   for(int i = 0; i<num_links;i++){
     posit[i][0] = random(0, ww-58);
     posit[i][1] = random(0, 140);
@@ -29,33 +29,33 @@ void setup(){
     b = b/abs(b);
     posit[i][5] = b*random(1,max_scale);
     setDestination(0,i);
-  }  
-      
+  }
+
   size(ww,200);
-  
+
 }
 
 void draw(){
   curse = 0;
   background(61,69,61);
-  
+
   for(int i = 0; i<num_links;i++){
     arrivalx = abs(dest[i][0]-posit[i][0]);
     arrivaly = abs(dest[i][1]-posit[i][1]);
     image(nimg[i],posit[i][0],posit[i][1],abs(nimg[i].width/posit[i][5]),abs(nimg[i].height/posit[i][5]));
-    
+
       if(arrivalx < 11 && arrivaly < 11){
         if(posit[i][4] == 0){
           setDestination(0,i);
         } else {
-         posit[i][2] = 0; 
-         posit[i][3] = 0; 
+         posit[i][2] = 0;
+         posit[i][3] = 0;
         }
       }
-      posit[i][0]+=posit[i][2];    
-      posit[i][1]+=posit[i][3];   
-      
-    /*Breathing*/  
+      posit[i][0]+=posit[i][2];
+      posit[i][1]+=posit[i][3];
+
+    /*Breathing*/
      posit[i][5]+=.0015;
      if(abs(posit[i][5])>max_scale || abs(posit[i][5])<1.0)posit[i][5] = posit[i][5]*-1;
      /*MouseOver*/
@@ -64,13 +64,13 @@ void draw(){
      /*MouseClick*/
         if (mousePressed && (mouseButton == LEFT)) {
           navigate(i);
-        }  
+        }
      }
   }//for
-   
-  //Make things look clickable! 
+
+  //Make things look clickable!
    if(curse){cursor(HAND);}else{cursor(ARROW);}
-   
+
   //Javascript interaction
    dt = int(dst);
    if(desti!=dt){
@@ -99,7 +99,7 @@ void setDestination(int s, int i){
     }
     posit[3][4] = 0;
     posit[4][4] = 0;
-    posit[5][4] = 0; 
+    posit[5][4] = 0;
     break;
   case 2:
     for(int j = 2; j<5; j++){
@@ -113,7 +113,7 @@ void setDestination(int s, int i){
     }
     posit[0][4] = 0;
     posit[1][4] = 0;
-    posit[5][4] = 0; 
+    posit[5][4] = 0;
     break;
   case 3:
      for(int j = 3; j<6; j++){
@@ -127,15 +127,15 @@ void setDestination(int s, int i){
     }
     posit[0][4] = 0;
     posit[1][4] = 0;
-    posit[2][4] = 0; 
+    posit[2][4] = 0;
     break;
   case 4:
        for(int j = 0; j<6; j++){
         posit[j][4] = 0;
     }
     break;
-    
-  default:  
+
+  default:
       dest[i][0] = random(0, ww-58);
       dest[i][1] = random(0, 140);
       dest_dist = dist(dest[i][0],posit[i][0],dest[i][1],posit[i][1]);

@@ -6,7 +6,7 @@
 	background-image: -moz-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
 	background-image: -webkit-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
 	background-image: -ms-linear-gradient(bottom, rgb(48,54,48) 0%, rgb(54,61,54) 100%);
-	
+
 	white-space:nowrap;
 	position:relative;
 	top:-40px;
@@ -38,7 +38,7 @@
 
 #top div:before{
 	content:attr(title);
-	clip:rect(0px,800px,75px,0px);
+	clip:rect(0px,3000px,75px,0px);
 	opacity:0.8;
 	color:#EFF1EF;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -111,7 +111,7 @@ div.app{
 	font-weight:600;
 	font-size:2em;
 	letter-spacing:-.05em;
-	
+
 	transition: all .1s, color 1s;
 	-moz-transition: all .2s, color 2s;
 	-o-transition: all .2s, color 2s;
@@ -126,8 +126,6 @@ div.app{
 	cursor:pointer;
 	text-shadow:-1px -1px 0px #121512,-2px -2px 0px #121512, -3px -3px 0px #121512;
 	position:relative;
-	left:3px;
-	top:3px;
 	/*Shoutout to Sergio Camalich for the text animation idea*/
 }
 
